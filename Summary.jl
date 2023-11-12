@@ -1,7 +1,10 @@
-# summary.jl -- a module in the making
+# Summary.jl
 
 
-using CategoricalArrays
+module Summary
+
+export CategoricalSummary # , summary
+
 
 struct CategoricalSummary
     levels
@@ -11,6 +14,11 @@ end
 function justify(s, n)
     repeat(" ", n - length(s)) * s
 end
+
+
+using CategoricalArrays
+
+import Base.summary
 
 function summary(x::CategoricalVector)
     CategoricalSummary(levels(x), map(v -> sum(x .== v), levels(x)))
@@ -28,6 +36,8 @@ function show(io::IO, obj::CategoricalSummary)
     for n in counts
         print(justify(n, k))
     end
+end
+
 end
 
 

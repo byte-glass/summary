@@ -1,12 +1,16 @@
 # x.jl - examples of use of summary
 
-include("summary.jl")
-
+# usage
+# 
+#   JULIA_LOAD_PATH="$JULIA_LOAD_PATH:$(pwd)" julia
+# 
 
 using CategoricalArrays, Random
 
 u = ["a", "b", "c"]
 x = categorical(u[rand(1:length(u), 1000)])
+
+using Summary
 
 summary(x)
 
