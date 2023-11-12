@@ -1,9 +1,10 @@
 # R's `summary` for julia
 
 ## next steps
- - introduce `CategoricalSummary` type and a `show` method for it
+ - make a module of summary.jl
 
 ## latest
+ - introduce `CategoricalSummary` object and `show` method for it
  - first straightforward version of `summary` for categorical data
 
 
