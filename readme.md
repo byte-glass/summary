@@ -2,10 +2,10 @@
 
 ## next steps
  - boolean vector as a special case of a categorical vector?
- - numerical vector
  - dataframe?
 
 ## latest
+ - handle missing values, introduce `SummaryObject` and summary of a numerical vector
  - make a module of summary.jl
  - `summary` exists in `Base`! Who knew?!
  - introduce `CategoricalSummary` object and `show` method for it
